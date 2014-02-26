@@ -3,19 +3,20 @@
  */
 
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 @media (min-width: 600px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 body {
   margin: 0;
-  padding: 3rem 1rem;
+  padding-bottom: 3rem;
   font: 1rem/1.5 "Helvetica Neue", sans-serif;
   color: #555;
+  text-align: center;
   background-color: #fff;
 }
 
@@ -35,23 +36,31 @@ h1, h2, h3 {
   color: #333;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 h1 small {
   font-size: 80%;
   color: #777;
 }
 h2 {
-  margin-top: 2rem;
-  font-size: 1.75rem;
+  margin-top: 3rem;
+  font-size: 2rem;
 }
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+.container > p {
+  margin: .5rem auto 1rem;
+  max-width: 800px;
+}
 
-h1 + p {
-  font-size: 1.25rem;
+hr {
+  max-width: 100px;
+  margin: 3rem auto;
+  border: 0;
+  border-top: .1rem solid #eee;
 }
 
 code {
@@ -61,6 +70,29 @@ code {
   color: #cd3333;
   background-color: #f5f5f5;
   border-radius: .15rem;
+  white-space: nowrap;
+}
+
+/* Display utility classes */
+.inline-block {
+  display: inline-block;
+}
+
+/* Masthead */
+.masthead {
+  padding: 4rem 1rem;
+  font-weight: 300;
+  color: rgba(255,255,255,.65);
+  text-align: center;
+  background-color: #b94a48;
+}
+.masthead a,
+.masthead strong {
+  font-weight: normal;
+  color: #fff;
+}
+.masthead p {
+  font-size: 1.25rem;
 }
 
 /* Make it red for easy views */
@@ -68,7 +100,7 @@ code {
   margin-bottom: 1rem;
 }
 .grid-example .col {
-  line-height: 3rem;
+  line-height: 3;
   text-align: center;
   color: #333;
   background-color: rgba(255,0,0,.15);
@@ -83,3 +115,10 @@ code {
   margin-bottom: 0;
 }
 
+/* Increase height of vertically centered example */
+.grid-example.grid-align-middle {
+  height: 200px;
+}
+.grid-example.grid-align-middle .col {
+  line-height: 1.5;
+}

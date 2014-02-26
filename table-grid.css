@@ -51,3 +51,13 @@
   }
 }
 
+
+/*
+ * Vertically center grid content
+ *
+ * Requires content within the column to be inline or inline-block.
+ */
+
+.grid-align-middle .col {
+  vertical-align: middle;
+}

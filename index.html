@@ -7,16 +7,26 @@
     <link href="docs.css" rel="stylesheet">
   </head>
   <body>
+
+    <div class="masthead">
+      <div class="container">
+        <h1 class="wordmark">
+          <a href="https://github.com/mdo/table-grid"><span>@</span>mdo/table-grid</a>
+        </h1>
+        <p>This is a serious-fun-dumb-useful experiment for writing a simple, responsive, and mobile-first CSS grid system. <strong>With tables.</strong></p>
+      </div>
+    </div>
+
     <div class="container">
 
-      <h1>
-        <a href="https://github.com/mdo/table-grid">Table Grid</a>
-        <small>by <a href="https://twitter.com/mdo">@mdo</a></small>
-      </h1>
-      <p>This is a serious-fun-dumb experiment for writing a different grid system. Rather than use <code>float</code>s, <code>display: inline-block;</code>, or <code>flex-box</code>, I thought I'd try <code>display: table;</code>.</p>
+      <h2>Premise</h2>
+      <p>CSS grid systems are typically built in one of two ways today—<code>float</code>s or some <code>display: inline-block;</code> hackery. Both are fine and well established, but <code>table</code>s are way fucking cooler. They give us some awesome power with the <code>table-layout</code> property and offer dead simple vertical centering.</p>
+      <p>Let's take a look.</p>
 
-      <h2>Default examples</h2>
-      <p>Twelve available columns, in all the usual combinations. CSS applies for viewports over <code>600px</code> wide.</p>
+      <hr>
+
+      <h2>Typical approach</h2>
+      <p>The typical approach is to create twelve fixed-width columns in all the usual combinations. Cool, super easy to do, and <a href="https://github.com/mdo/table-grid"><span>@</span>mdo/table-grid</a> supports that. There's also a base class for ease of use that makes our columns use <code>display: table-cell;</code> and more.</p>
       <div class="grid grid-example">
         <div class="col col-1">1</div>
         <div class="col col-1">1</div>
@@ -31,7 +41,6 @@
         <div class="col col-1">1</div>
         <div class="col col-1">1</div>
       </div>
-
       <div class="grid grid-example">
         <div class="col col-2">2</div>
         <div class="col col-2">2</div>
@@ -40,75 +49,143 @@
         <div class="col col-2">2</div>
         <div class="col col-2">2</div>
       </div>
-
       <div class="grid grid-example">
         <div class="col col-3">3</div>
         <div class="col col-3">3</div>
         <div class="col col-3">3</div>
         <div class="col col-3">3</div>
       </div>
-
       <div class="grid grid-example">
         <div class="col col-4">4</div>
         <div class="col col-4">4</div>
         <div class="col col-4">4</div>
       </div>
-
       <div class="grid grid-example">
         <div class="col col-5">5</div>
         <div class="col col-7">7</div>
       </div>
-
       <div class="grid grid-example">
         <div class="col col-6">6</div>
         <div class="col col-6">6</div>
       </div>
-
       <div class="grid grid-example">
         <div class="col col-8">8</div>
         <div class="col col-4">4</div>
       </div>
-
       <div class="grid grid-example">
         <div class="col col-12">12</div>
       </div>
 
+      <hr>
+
+      <h2>Table layout</h2>
+      <p>Now comes the really fun part. With <code>table-layout: fixed;</code>, we can drop half our grid classes. <strong>Fixed table layouts render equal-width columns when no other width is set.</strong></p>
+      <div class="grid grid-example">
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+      </div>
+      <div class="grid grid-example">
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+        <div class="col">Col</div>
+      </div>
+      <div class="grid grid-example">
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+      </div>
+      <div class="grid grid-example">
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+      </div>
+      <div class="grid grid-example">
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+      </div>
+      <div class="grid grid-example">
+        <div class="col">Column</div>
+      </div>
+
+      <hr>
+
       <h2>Nested</h2>
-      <p>Place any <code>.grid</code> within another <code>.col</code> for easy nesting.</p>
+      <p>With or without those extra classes, table grids are easily nestable. Just place a <code>.grid</code> with any combination of columns within an existing <code>.col</code>.</p>
       <div class="grid grid-example">
         <div class="col col-8">
           8
           <div class="grid grid-example">
-            <div class="col col-6">6</div>
-            <div class="col col-6">6</div>
+            <div class="col">Column</div>
+            <div class="col">Column</div>
           </div>
         </div>
         <div class="col col-4">4</div>
       </div>
 
       <h2>Grids with gutters</h2>
-      <p>Wrap the <code>.grid</code> with <code>div.grid-padded</code> to add gutters. The wrapping <code>.grid-padded</code> is to negative margin the <code>.grid</code> out to account for the gutters.</p>
+      <p>Wrap the <code>.grid</code> with <code>div.grid-padded</code> to add gutters between columns. Works on any column, even the  <code>width</code>-less base class.</p>
       <div class="grid-padded">
         <div class="grid grid-example">
-          <div class="col col-4">4</div>
-          <div class="col col-4">4</div>
-          <div class="col col-4">4</div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
         </div>
       </div>
-
       <div class="grid-padded">
         <div class="grid grid-example">
-          <div class="col col-6">6</div>
-          <div class="col col-6">6</div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
         </div>
       </div>
-
       <div class="grid-padded">
         <div class="grid grid-example">
           <div class="col col-8">8</div>
           <div class="col col-4">4</div>
         </div>
       </div>
+      <p>The wrapping <code>.grid-padded</code> applies negative horizontal margins to account for the gutters. Tables that are 100% wide cannot have negative horizontal margins directly applied to them, so we must use a wrapper.</p>
+
+      <hr>
+
+      <h2>Vertically center content</h2>
+      <p>Add the <code>.grid-align-middle</code> class to the <code>.grid</code> and voilà. Requires the use of <code>inline</code>, <code>inline-block</code>, or <code>table</code> based elements within a column.</p>
+      <div class="grid-padded">
+        <div class="grid grid-align-middle grid-example">
+          <div class="col">
+            Free-form text wraps while remaining vertically centered.
+          </div>
+          <div class="col">
+            Nested columns center, too.
+            <div class="grid grid-example">
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="inline-block">A <code>div</code> with <code>inline-block</code> works great, too.</div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <p>Shoutout to tables.</p>
+      <p>Shoutout to <a href="http://jxnblk.com">@jxnblk</a> for the vertical alignment tip.</p>
+      <p>&lt;3</p>
 
     </div>
 

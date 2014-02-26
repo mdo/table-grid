@@ -18,7 +18,8 @@ As always, there's a container, row, and a series of columns. It's responsive, t
 
 - Center the site contents with `.container`, which has a `max-width: 940px;`.
 - Wrap a row of columns with `.grid`. This sets up the table-based grid with `display: table;`, `width: 100%;`, and `table-layout: fixed;`.
-- Columns get the `.col` base class and a width class, like `.col-1` or `.col-6`. There are 12 available column classes, 1-12.
+- Columns get the `.col` base class and a width class, like `.col-1` or `.col-6`. There are 12 available column classes, 1-12, for any variety of column combinations.
+- Howeve, a grid width class is not required. For equal width columns, just use `.col`. Tables, baby!
 - Grids are nestable—just place a `.grid` within any `.col`. Bam.
 - By default, because of how `display: table;` works, there's no gutters. To add gutters, wrap the `.grid` in `.grid-padded`, which adds gutters with `border-spacing: 1rem 0;`. Sucks, but this *is* an experiment.
 
@@ -34,4 +35,4 @@ If you need a nuclear hardened grid system, check out [Bootstrap](http://getboot
 
 ### License
 
-MIT, (c) Mark Otto.
+MIT, (c) Mark Otto 2014.
