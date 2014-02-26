@@ -5,6 +5,10 @@ body {
   background-color: #fff;
 }
 
+.container {
+  max-width: 940px;
+}
+
 /* The Grid */
 .grid {
   display: table;
@@ -32,6 +36,7 @@ body {
   margin-bottom: 1rem;
 }
 .grid-example .col {
+  padding: .5rem;
   text-align: center;
   background-color: rgba(255,0,0,.2);
 }
