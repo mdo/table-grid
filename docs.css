@@ -25,6 +25,9 @@ h1, h2, h3 {
   line-height: 1.1;
   color: #333;
 }
+h2 {
+  margin-top: 2rem;
+}
 p {
   margin-top: 0;
   margin-bottom: 1rem;
