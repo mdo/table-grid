@@ -90,7 +90,7 @@ code {
   margin-bottom: 1rem;
 }
 .grid-example .col {
-  padding: .5rem;
+  line-height: 3rem;
   text-align: center;
   background-color: rgba(255,0,0,.2);
 }
