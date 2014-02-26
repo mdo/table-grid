@@ -61,3 +61,14 @@
 .grid-align-middle .col {
   vertical-align: middle;
 }
+
+
+/*
+ * Align grid content to bottom of column
+ *
+ * Requires content within the column to be inline or inline-block.
+ */
+
+.grid-align-bottom .col {
+  vertical-align: bottom;
+}
