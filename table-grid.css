@@ -14,7 +14,6 @@
  * The Grid
  */
 
-
 @media (min-width: 600px) {
   /* Add `.grid` for the table */
   .grid {
@@ -44,11 +43,11 @@
 
   /* Padded columns */
   .grid-padded {
-    margin-left:  -20px;
-    margin-right: -20px;
+    margin-left:  -1rem;
+    margin-right: -1rem;
   }
   .grid-padded .grid {
-    border-spacing: 20px 0;
+    border-spacing: 1rem 0;
   }
 }
 
