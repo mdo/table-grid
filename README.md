@@ -7,7 +7,7 @@ Every grid to date uses `float`s or some `inline-block` hackery. That's so 2013 
 This isn't a serious project really, it's just an experiment. I'm curious about the rendering performance of using `display: table;` as opposed to `float`s, `flex-box`, or `display: inline-block;`. Each option has pros or cons, but in particular I'm focused on the con part:
 
 - `float`s require clearing and I have zero idea about rendering performance. They're straightfoward and Just Work&trade;.
-- `flex-box` has poor rendering last I heard because browsers have to do a lot of repainting to support it. I have no references to this, it's what I've heard. Plus, browser support and what not.
+- `flex-box` has poor rendering last I heard because browsers have to do a lot of repainting to support it. I have no references to this, it's what I've heard. Plus, [browser support](http://caniuse.com/#feat=flexbox) and what not.
 - `display: inline-block;` is gnarly because it involves resetting `white-space` and that's just silly. We shouldn't be resetting that kind of stuff just for a grid system.
 
 So, based on that, `display: table;` starts to sound kind of interesting.
