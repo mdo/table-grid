@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 3rem 1rem;
   font: 16px/1.5 "Helvetica Neue", sans-serif;
+  color: #555;
   background-color: #fff;
 }
 
@@ -16,6 +17,8 @@ a:hover {
 h1, h2, h3 {
   margin-top: 0;
   margin-bottom: .5rem;
+  font-weight: normal;
+  color: #333;
 }
 p {
   margin-top: 0;
@@ -70,4 +73,8 @@ code {
 }
 .grid-example .col:nth-child(odd) {
   background-color: rgba(255,0,0,.4);
+}
+/* Nested grid examples */
+.grid-example .grid-example {
+  margin-bottom: 0;
 }
