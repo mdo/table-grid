@@ -7,6 +7,8 @@ body {
 
 .container {
   max-width: 940px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* The Grid */
