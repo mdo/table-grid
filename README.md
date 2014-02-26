@@ -2,7 +2,7 @@
 
 Every grid to date uses `float`s or some `inline-block` hackery. That's so 2013 though, and seeing that it's now 2014, we need something newer, faster, and stronger. So, Table Grid was born.
 
-### wtf
+### Wtf
 
 This isn't a serious project really, it's just an experiment. I'm curious about the rendering performance of using `display: table;` as opposed to `float`s, `flex-box`, or `display: inline-block;`. Each option has pros or cons, but in particular I'm focused on the con part:
 
@@ -12,9 +12,21 @@ This isn't a serious project really, it's just an experiment. I'm curious about 
 
 So, based on that, `display: table;` starts to sound kind of interesting.
 
+### How it works
+
+As always, there's a container, row, and a series of columns. It's responsive, too. More specifically:
+
+- Center the site contents with `.container`, which has a `max-width: 940px;`.
+- Wrap a row of columns with `.grid`. This sets up the table-based grid with `display: table;`, `width: 100%;`, and `table-layout: fixed;`.
+- Columns get the `.col` base class and a width class, like `.col-1` or `.col-6`. There are 12 available column classes, 1-12.
+- Grids are nestable—just place a `.grid` within any `.col`. Bam.
+- By default, because of how `display: table;` works, there's no gutters. To add gutters, wrap the `.grid` in `.grid-padded`, which adds gutters with `border-spacing: 1rem 0;`. Sucks, but this *is* an experiment.
+
+All this can be seen in action on [the demo page](http://mdo.github.io/table-grid).
+
 ### Example
 
-Check out the example on GitHub Pages at http://mdo.github.io/table-grid/index.html. Clone this or download it to give it a whirl for yourself.
+Check out the example on GitHub Pages at <http://mdo.github.io/table-grid/>. Clone this or download it to give it a whirl for yourself.
 
 ### Fuck you, where's the real grid?
 
