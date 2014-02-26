@@ -1,0 +1,60 @@
+/*
+ * Styles for the Table Grid docs.
+ */
+
+body {
+  margin: 0;
+  padding: 3rem 1rem;
+  font: 16px/1.5 "Helvetica Neue", sans-serif;
+  color: #555;
+  background-color: #fff;
+}
+
+a {
+  color: #1874cd;
+  text-decoration: none;
+}
+a:hover {
+  color: #104e8b;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: normal;
+  line-height: 1.1;
+  color: #333;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+code {
+  padding: .1rem .3rem;
+  font-family: Menlo, "Courier New", monospace;
+  font-size: 90%;
+  color: #cd3333;
+  background-color: #eee;
+  border-radius: .2rem;
+}
+
+/* Make it red for easy views */
+.grid-example {
+  margin-bottom: 1rem;
+}
+.grid-example .col {
+  line-height: 3rem;
+  text-align: center;
+  background-color: rgba(255,0,0,.2);
+}
+.grid-example .col:nth-child(odd) {
+  background-color: rgba(255,0,0,.4);
+}
+
+/* Nested grid examples need outdenting because padding. */
+.grid-example .grid-example {
+  margin-top: .5rem;
+  margin-bottom: 0;
+}
+
