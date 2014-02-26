@@ -101,5 +101,6 @@ code {
 /* Nested grid examples need outdenting because padding. */
 .grid-example .grid-example {
   margin-top: .5rem;
+  margin-bottom: 0;
 }
 
