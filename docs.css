@@ -20,6 +20,11 @@ body {
   background-color: #fff;
 }
 
+.container {
+  max-width: 54rem;
+  padding: 0 1rem;
+}
+
 a {
   color: #1874cd;
   text-decoration: none;
@@ -120,5 +125,6 @@ code {
   height: 200px;
 }
 .grid-example.grid-align-middle .col {
+  min-height: 3rem;
   line-height: 1.5;
 }
