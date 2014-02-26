@@ -55,8 +55,6 @@ code {
 /* Add `.col` for the table cells, or columns */
 .col {
   display: table-cell;
-  padding-left: .5rem;
-  padding-right: .5rem;
 }
 
 /* Set the widths */
@@ -75,12 +73,11 @@ code {
 
 /* Padded columns */
 .grid-padded {
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left:  -20px;
+  margin-right: -20px;
 }
 .grid-padded .grid {
-  border-spacing: 10px 0;
-  border-collapse: separate;
+  border-spacing: 20px 0;
 }
 
 
@@ -103,6 +100,6 @@ code {
 
 /* Nested grid examples need outdenting because padding. */
 .grid-example .grid-example {
-  margin: .5rem -.5rem -.5rem;
+  margin-top: .5rem;
 }
 
