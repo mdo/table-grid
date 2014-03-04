@@ -12,7 +12,7 @@ This isn't a serious project really, it's just an experiment. I'm curious about 
 - `flex-box` has poor rendering last I heard because browsers have to do a lot of repainting to support it. I have no references to this, it's what I've heard. Plus, [browser support](http://caniuse.com/#feat=flexbox) and what not.
 - `display: inline-block;` is gnarly because it involves resetting `white-space` and that's just silly. We shouldn't be resetting that kind of stuff just for a grid system.
 
-So, based on that, `display: table;` starts to sound kind of interesting. Table layouts, especially ones that include `table-layout: fixed;` render super fast because browsers only need to render the first row of cells to pain the whole table. That's kind of moot with one row grids like this, but it *might* help anyway.
+So, based on that, `display: table;` starts to sound kind of interesting. Table layouts, especially ones that include `table-layout: fixed;` render super fast because browsers only need to render the first row of cells to paint the whole table. That's kind of moot with one row grids like this, but it *might* help anyway.
 
 ### How it works
 
