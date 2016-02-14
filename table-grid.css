@@ -67,3 +67,15 @@
 .grid-align-middle .col {
   vertical-align: middle;
 }
+
+
+/*
+ * Reverse column sorting
+ */
+
+.grid-reverse {
+  direction: rtl;
+}
+.grid-reverse .col {
+  direction: ltr;
+}
