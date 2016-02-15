@@ -20,25 +20,27 @@ As always, there's a container, row, and a series of columns. It's responsive, t
 
 - Center the site contents with `.container`, which has a `max-width: 940px;`.
 - Wrap a row of columns with `.grid`. This sets up the table-based grid with `display: table;`, `width: 100%;`, and `table-layout: fixed;`.
-- Columns get the `.col` base class and a width class, like `.col-1` or `.col-6`. There are 12 available column classes, 1-12, for any variety of column combinations.
-- Howeve, a grid width class is not required. For equal width columns, just use `.col`. Tables, baby!
-- Grids are nestable—just place a `.grid` within any `.col`. Bam.
-- By default, because of how `display: table;` works, there's no gutters. To add gutters, wrap the `.grid` in `.grid-padded`, which adds gutters with `border-spacing: 1rem 0;`. Sucks, but this *is* an experiment.
+- Columns get the `.col` base class and an optional width class, like `.col-1` or `.col-6`. There are 12 available column classes, 1-12, for any variety of column combinations.
+- Grid width class is not required. Without them, all columns become equal width via `.col` alone. Tables, baby!
+- Grids are nestable—just place a new `.grid` within any `.col`. Bam.
+- By default, because of how `display: table;` works, there's no gutters. To add gutters, wrap the `.grid` in `.grid-padded`, which adds gutters with `border-spacing: 1rem 0;`. Sucks, but this *is* experimental.
 
 All this can be seen in action on [the demo page](http://mdo.github.io/table-grid).
 
 ### What's included
 
-Two CSS files to choose from, each under 1kb.
+Table Grid has been rebuilt to use Sass (thanks, Jekyll!). Key CSS bits are broken down in `_sass`:
 
-* `.table-grid.css` — full set of grid classes with column widths
-* `.table-grid-simple.css` — only the container, row, and base class
+- `grid-basics.scss` contains the container and basic responsive, equal-width column support.
+- `grid-columns.scss` contains specific column width classes for more granular control (e.g, `.col-6` is 50% wide).
+- `grid-extras.scss` is for alignment and sorting options.
 
-Choose either CSS file, but not both. See <http://mdo.github.io/table-grid/> for details.
+
+See <http://mdo.github.io/table-grid/> for details on usage.
 
 ### Fuck you, where's the real grid?
 
-If you need a nuclear hardened grid system, check out [Bootstrap](http://getbootstrap.com/css/#grid). It's pretty cool I guess.
+If you need a nuclear hardened grid system, check out [Bootstrap](http://getbootstrap.com/css/#grid). It's okay.
 
 ### License
 

@@ -1,0 +1,20 @@
+// Vertically center grid content
+//
+// Requires content within the column to be inline or inline-block.
+
+.grid-align-middle .col {
+  vertical-align: middle;
+}
+
+
+//
+// Reverse column sorting
+//
+
+.grid-reverse {
+  direction: rtl;
+}
+
+.grid-reverse .col {
+  direction: ltr;
+}
