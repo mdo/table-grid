@@ -35,10 +35,11 @@
     // Add '.col' for the table cells, or columns
     .col {
         display: table-cell;
-        background: pink;
+//        background: pink;
     }
     
     // Padded columns
+    // Use as a wrapper around '.grid' to create column spacing
     .grid-padded {
         margin-left: -$gutter-width;
         margin-right: -$gutter-width;
