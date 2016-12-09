@@ -2,8 +2,19 @@
 //
 // Requires content within the column to be inline or inline-block.
 
-.grid-align-middle .col {
-  vertical-align: middle;
+
+.col {
+    &.align-top {
+        vertical-align: top;
+    }
+    
+    &.align-middle {
+        vertical-align: middle;
+    }
+    
+    &.align-bottom {
+        vertical-align: bottom;
+    }
 }
 
 

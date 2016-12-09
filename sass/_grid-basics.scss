@@ -1,0 +1,46 @@
+//
+// Container
+//
+
+// Holds and centers the site content
+// overflow-x is used to fix the container's width when .grid-padded is used. This ensures the inner columns have gutters whilst first and last columns meet the container's edge (as is what should be expected of a grid system).
+
+.container {
+    max-width: $container-width; 
+    margin-right: auto;  
+    margin-left: auto; 
+    overflow-x: hidden; 
+} 
+
+//
+// Grid classes
+//
+@media (min-width: $mobile-breakpoint) {
+    // Add '.grid' for the table
+    .grid {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        
+        //add '.padded' for inner gutters
+        .padded {
+            padding: $gutter-width / 2;
+        }
+        
+        .grid-padded & {
+            border-spacing: $gutter-width 0;
+        }
+    }
+    
+    // Add '.col' for the table cells, or columns
+    .col {
+        display: table-cell;
+        background: pink;
+    }
+    
+    // Padded columns
+    .grid-padded {
+        margin-left: -$gutter-width;
+        margin-right: -$gutter-width;
+    }
+}

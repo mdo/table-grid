@@ -1,0 +1,11 @@
+//Make the columns + mobile styles
+@for $i from 1 through ($column-count) {
+    .col-#{$i} {
+        width: 100%;
+    }
+    @media (min-width: $mobile-breakpoint) {
+        .col-#{$i} {
+            width: #{ (100 / $column-count) * $i + '%'};
+        }
+    }
+}
