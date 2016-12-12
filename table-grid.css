@@ -5,7 +5,9 @@
   max-width: 1400px;
   margin-right: auto;
   margin-left: auto;
-  overflow-x: hidden; }
+  overflow: hidden;
+  display: table;
+  width: 100%; }
 
 @media (min-width: 600px) {
   .grid {
