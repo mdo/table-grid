@@ -5,7 +5,9 @@
   max-width: 1400px;
   margin-right: auto;
   margin-left: auto;
-  overflow-x: hidden; }
+  overflow: hidden;
+  display: table;
+  width: 100; }
 
 @media (min-width: 600px) {
   .grid {
@@ -17,7 +19,8 @@
     .grid-padded .grid {
       border-spacing: 40px 0; }
   .col {
-    display: table-cell; }
+    display: table-cell;
+    background: pink; }
   .grid-padded {
     margin-left: -40px;
     margin-right: -40px; } }
