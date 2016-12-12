@@ -1,8 +1,6 @@
 // Vertically center grid content
-//
-// Requires content within the column to be inline or inline-block.
 
-
+//append alignment class to the .col tag
 .col {
     &.align-top {
         vertical-align: top;
