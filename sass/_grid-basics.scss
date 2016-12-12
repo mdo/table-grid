@@ -7,11 +7,9 @@
 
 .container {
     max-width: $container-width; 
-    margin-right: auto;   
-    margin-left: auto;   
-    overflow: hidden; // avoids scrollbars created by the negative margins
-    display: table; // this fixes the issue of disappearing content if it is surrounded by a wrapping div with no display set 
-    width: 100 // make sure the container is always at max-width 
+    margin-right: auto;  
+    margin-left: auto; 
+    overflow-x: hidden; 
 } 
 
 //
@@ -37,7 +35,7 @@
     // Add '.col' for the table cells, or columns
     .col {
         display: table-cell;
-        background: pink;
+//        background: pink;
     }
     
     // Padded columns
