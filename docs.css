@@ -18,6 +18,8 @@ body {
   color: #555;
   text-align: center;
   background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -97,6 +99,10 @@ code {
 }
 .masthead p {
   font-size: 1.25rem;
+}
+
+.wordmark, .masthead p {
+  letter-spacing: 0.05rem;
 }
 
 /* Make it red for easy views */
