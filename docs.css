@@ -2,224 +2,448 @@
  * Styles for the Table Grid docs.
  */
 
-html {
-  font-size: 14px;
+/*update*/
+.container-update { 
+    padding: 0;
 }
+
+.grid-padded {
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+.grid-aligned.grid {
+    height: 400px;
+}
+
+html {
+    font-size: 14px;
+}
+
 @media (min-width: 600px) {
-  html {
-    font-size: 18px;
-  }
+    html {
+        font-size: 18px;
+    }
 }
 
 body {
-  margin: 0;
-  padding-bottom: 3rem;
-  font: 1rem/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-  color: #555;
-  text-align: center;
-  background-color: #fff;
+    margin: 0;
+    padding-bottom: 3rem;
+    font: 1rem/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    color: #555;
+    text-align: center;
+    background-color: #fff;
 }
 
 .container {
-  max-width: 54rem;
-  padding: 0 1rem;
+    max-width: 54rem;
+    padding: 0 1rem;
 }
 
 a {
-  color: #1874cd;
-  text-decoration: none;
-}
-a:hover {
-  color: #104e8b;
+    color: #1874cd;
+    text-decoration: none;
 }
 
-h1, h2, h3 {
-  margin-top: 0;
-  margin-bottom: .5rem;
-  font-weight: 500;
-  line-height: 1.1;
-  color: #333;
+a:hover {
+    color: #104e8b;
 }
+
+ul {
+    display: table;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #333;
+}
+
 h1 {
-  font-size: 3rem;
+    font-size: 3rem;
 }
+
 h1 small {
-  font-size: 80%;
-  color: #777;
+    font-size: 80%;
+    color: #777;
 }
+
 h2 {
-  margin-top: 3rem;
-  font-size: 2rem;
+    margin-top: 3rem;
+    font-size: 2rem;
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
+
 .container > p {
-  margin: .5rem auto 1rem;
-  max-width: 800px;
+    margin: .5rem auto 1rem;
+    max-width: 800px;
 }
 
 hr {
-  max-width: 100px;
-  margin: 3rem auto;
-  border: 0;
-  border-top: .1rem solid #eee;
+    max-width: 100px;
+    margin: 3rem auto;
+    border: 0;
+    border-top: .1rem solid #eee;
 }
 
 code {
-  padding: .15rem .3rem;
-  font-family: Menlo, "Courier New", monospace;
-  font-size: 90%;
-  color: #cd3333;
-  background-color: #f5f5f5;
-  border-radius: .15rem;
+    padding: .15rem .3rem;
+    font-family: Menlo, "Courier New", monospace;
+    font-size: 90%;
+    color: #cd3333;
+    background-color: #f5f5f5;
+    border-radius: .15rem;
 }
+
 
 /* Display utility classes */
+
 .inline-block {
-  display: inline-block;
+    display: inline-block;
 }
+
 
 /* Masthead */
+
 .masthead {
-  padding: 4rem 1rem;
-  font-weight: 300;
-  color: rgba(255,255,255,.65);
-  text-align: center;
-  background-color: #b94a48;
+    padding: 4rem 1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, .65);
+    text-align: center;
+    background-color: #b94a48;
 }
+
 .masthead a,
 .masthead strong {
-  font-weight: normal;
-  color: #fff;
+    font-weight: normal;
+    color: #fff;
 }
+
 .masthead p {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
+
 
 /* Make it red for easy views */
+
 .grid-example {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
+
 .grid-example .col {
-  line-height: 3;
-  text-align: center;
-  color: #333;
-  background-color: rgba(255,0,0,.15);
+    line-height: 3;
+    text-align: center;
+    color: #333;
+    background-color: rgba(255, 0, 0, .15);
 }
+
 .grid-example .col:nth-child(odd) {
-  background-color: rgba(255,0,0,.3);
+    background-color: rgba(255, 0, 0, .3);
 }
+
 
 /* Nested grid examples need outdenting because padding. */
+
 .grid-example .grid-example {
-  margin-top: .5rem;
-  margin-bottom: 0;
+    margin-top: .5rem;
+    margin-bottom: 0;
 }
 
+
 /* Increase height of vertically centered example */
+
 .grid-example.grid-align-middle {
-  height: 200px;
+    height: 200px;
 }
+
 .grid-example.grid-align-middle .col {
-  min-height: 3rem;
-  line-height: 1.5;
+    min-height: 3rem;
+    line-height: 1.5;
 }
+
 
 /* Syntax */
 
-.hll { background-color: #ffc; }
-.c { color: #999; }
-.k { color: #069; }
-.o { color: #555; }
-.cm { color: #999; }
-.cp { color: #099; }
-.c1 { color: #999; }
-.cs { color: #999; }
-.gd { background-color: #fcc; border: 1px solid #c00; }
-.ge { font-style: italic; }
-.gr { color: #f00; }
-.gh { color: #030; }
-.gi { background-color: #cfc; border: 1px solid #0c0; }
-.go { color: #aaa; }
-.gp { color: #009; }
-.gu { color: #030; }
-.gt { color: #9c6; }
-.kc { color: #069; }
-.kd { color: #069; }
-.kn { color: #069; }
-.kp { color: #069; }
-.kr { color: #069; }
-.kt { color: #078; }
-.m { color: #f60; }
-.s { color: #d44950; }
-.na { color: #4f9fcf; }
-.nb { color: #366; }
-.nc { color: #0a8; }
-.no { color: #360; }
-.nd { color: #99f; }
-.ni { color: #999; }
-.ne { color: #c00; }
-.nf { color: #c0f; }
-.nl { color: #99f; }
-.nn { color: #0cf; }
-.nt { color: #2f6f9f; }
-.nv { color: #033; }
-.ow { color: #000; }
-.w { color: #bbb; }
-.mf { color: #f60; }
-.mh { color: #f60; }
-.mi { color: #f60; }
-.mo { color: #f60; }
-.sb { color: #c30; }
-.sc { color: #c30; }
-.sd { font-style: italic; color: #c30; }
-.s2 { color: #c30; }
-.se { color: #c30; }
-.sh { color: #c30; }
-.si { color: #a00; }
-.sx { color: #c30; }
-.sr { color: #3aa; }
-.s1 { color: #c30; }
-.ss { color: #fc3; }
-.bp { color: #366; }
-.vc { color: #033; }
-.vg { color: #033; }
-.vi { color: #033; }
-.il { color: #f60; }
+.hll {
+    background-color: #ffc;
+}
+
+.c {
+    color: #999;
+}
+
+.k {
+    color: #069;
+}
+
+.o {
+    color: #555;
+}
+
+.cm {
+    color: #999;
+}
+
+.cp {
+    color: #099;
+}
+
+.c1 {
+    color: #999;
+}
+
+.cs {
+    color: #999;
+}
+
+.gd {
+    background-color: #fcc;
+    border: 1px solid #c00;
+}
+
+.ge {
+    font-style: italic;
+}
+
+.gr {
+    color: #f00;
+}
+
+.gh {
+    color: #030;
+}
+
+.gi {
+    background-color: #cfc;
+    border: 1px solid #0c0;
+}
+
+.go {
+    color: #aaa;
+}
+
+.gp {
+    color: #009;
+}
+
+.gu {
+    color: #030;
+}
+
+.gt {
+    color: #9c6;
+}
+
+.kc {
+    color: #069;
+}
+
+.kd {
+    color: #069;
+}
+
+.kn {
+    color: #069;
+}
+
+.kp {
+    color: #069;
+}
+
+.kr {
+    color: #069;
+}
+
+.kt {
+    color: #078;
+}
+
+.m {
+    color: #f60;
+}
+
+.s {
+    color: #d44950;
+}
+
+.na {
+    color: #4f9fcf;
+}
+
+.nb {
+    color: #366;
+}
+
+.nc {
+    color: #0a8;
+}
+
+.no {
+    color: #360;
+}
+
+.nd {
+    color: #99f;
+}
+
+.ni {
+    color: #999;
+}
+
+.ne {
+    color: #c00;
+}
+
+.nf {
+    color: #c0f;
+}
+
+.nl {
+    color: #99f;
+}
+
+.nn {
+    color: #0cf;
+}
+
+.nt {
+    color: #2f6f9f;
+}
+
+.nv {
+    color: #033;
+}
+
+.ow {
+    color: #000;
+}
+
+.w {
+    color: #bbb;
+}
+
+.mf {
+    color: #f60;
+}
+
+.mh {
+    color: #f60;
+}
+
+.mi {
+    color: #f60;
+}
+
+.mo {
+    color: #f60;
+}
+
+.sb {
+    color: #c30;
+}
+
+.sc {
+    color: #c30;
+}
+
+.sd {
+    font-style: italic;
+    color: #c30;
+}
+
+.s2 {
+    color: #c30;
+}
+
+.se {
+    color: #c30;
+}
+
+.sh {
+    color: #c30;
+}
+
+.si {
+    color: #a00;
+}
+
+.sx {
+    color: #c30;
+}
+
+.sr {
+    color: #3aa;
+}
+
+.s1 {
+    color: #c30;
+}
+
+.ss {
+    color: #fc3;
+}
+
+.bp {
+    color: #366;
+}
+
+.vc {
+    color: #033;
+}
+
+.vg {
+    color: #033;
+}
+
+.vi {
+    color: #033;
+}
+
+.il {
+    color: #f60;
+}
 
 .css .o,
 .css .o + .nt,
-.css .nt + .nt { color: #999; }
-
+.css .nt + .nt {
+    color: #999;
+}
 
 .highlight {
-  padding: 1rem;
-  margin: 1rem -1rem;
-  font-size: 90%;
-  text-align: left;
-  background-color: #f7f7f9;
+    padding: 1rem;
+    margin: 1rem -1rem;
+    font-size: 90%;
+    text-align: left;
+    background-color: #f7f7f9;
 }
 
 @media (min-width: 600px) {
-  .highlight {
-    padding: 1.5rem;
-    margin-right: 0;
-    margin-left: 0;
-  }
+    .highlight {
+        padding: 1.5rem;
+        margin-right: 0;
+        margin-left: 0;
+    }
 }
 
 .highlight pre {
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-  border: 0;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 0;
 }
+
 .highlight pre code {
-  font-size: inherit;
-  color: #333;
-  background-color: transparent;
+    font-size: inherit;
+    color: #333;
+    background-color: transparent;
 }

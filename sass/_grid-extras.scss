@@ -1,0 +1,29 @@
+// Vertically center grid content
+
+//append alignment class to the .col tag
+.col {
+    &.align-top {
+        vertical-align: top;
+    }
+    
+    &.align-middle {
+        vertical-align: middle;
+    }
+    
+    &.align-bottom {
+        vertical-align: bottom;
+    }
+}
+
+
+//
+// Reverse column sorting
+//
+
+.row-reverse {
+  direction: rtl;
+}
+
+.row-reverse .col {
+  direction: ltr;
+}

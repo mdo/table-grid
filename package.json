@@ -1,0 +1,36 @@
+{
+    "name": "table-grid",
+    "version": "1.0.0",
+    "description": "The ultimate lightweight grid",
+    "main": "gulpfile.js",
+    "keywords": [
+    "grid",
+    "scss",
+    "css"
+  ],
+    "contributors": [
+        {
+            "name": "Jaclyn Tan",
+            "url": "http://jaclyntan.com",
+            "email": "heyj@jaclyntan.com"
+        }
+  ],
+    "author": "Mark Otto",
+    "repository": {
+        "type": "git",
+        "url": "http://mdo.fm"
+    },
+    "licenses": [{
+        "type": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+  }],
+    "devDependencies": {
+        "browser-sync": "*",
+        "gulp-autoprefixer": "*",
+        "gulp-clean-css": "*",
+        "gulp-plumber": "*",
+        "gulp-rename": "*",
+        "gulp-sass": "*",
+        "gulp": "*"
+    }
+}

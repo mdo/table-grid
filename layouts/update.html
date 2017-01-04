@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Table Grid by @mdo</title>
+    <link href="../table-grid.css" rel="stylesheet">
+    <link href="../docs.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="masthead">
+        <div class="container">
+            <h1 class="wordmark">
+          <a href="https://github.com/mdo/table-grid"><span>@</span>mdo/table-grid</a>
+        </h1>
+            <p>This is a serious-fun-dumb-useful experiment for writing a simple, responsive, and mobile-first CSS grid system. <strong>With tables.</strong></p>
+        </div>
+    </div>
+
+    <h2>Sass variables</h2> 
+    Only 4 variables needed:
+    <ul>
+        <li>mobile-breakpoint: 600px;</li>
+        <li>$container-width: 1000px;</li>
+        <li>$gutter-width: 50px;</li>
+        <li>$column-count: 13; </li>
+    </ul>
+
+    <div class="container-update container">
+        <h2>Improved gutters</h2> Large gutters without affecting the first and last columns
+        <div class="row-padded">
+            <div class="row grid-example">
+                <div class="col">col</div>
+                <div class="col">col</div>
+                <div class="col">col</div>
+            </div>
+        </div>
+
+        <h2># Columns</h2> Make as many or as little columns as the design calls for
+
+        <div class="row-padded">
+            <div class="row grid-example">
+                <div class="col col-3">col-3</div>
+                <div class="col col-2">col-2</div>
+                <div class="col col-4">col-4</div>
+                <div class="col col-1">col-1</div>
+                <div class="col col-3">col-3</div>
+            </div>
+        </div>
+
+        <h2>Column padding and alignment</h2> Add padding to a column by adding '.padded' to the .col tag. <br/>
+        Align content in each column easily by adding '.align-top, .align-middle, or .align-bottom' to the .col tag.
+            <div class="row row-aligned row-example">
+                <div class="col col-3">Easier</div>
+                <div class="col col-2 align-top padded">to</div>
+                <div class="col col-4 align-bottom padded">align and pad</div>
+                <div class="col col-1 align-top">than</div>
+                <div class="col col-3">flexbox</div>
+            </div>
+            
+            <div class="row-padded">
+            <div class="row row-auto grid-example">
+                <div class="col col-5 align-bottom">
+                    <div class="test">
+                        asd
+                    </div>
+                </div>
+                <div class="col col-5">
+                    <div class="test">
+                        asdasdadssaasdas<p/>
+                        asdasd
+                        as<p/>
+                        d
+                        sad<p/>
+                        sa
+                        d
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row-padded">
+            <div class="row grid-example">
+                <div class="col col-3">col-3</div>
+                <div class="col col-2">col-2</div>
+                <div class="col col-4">col-4</div>
+                <div class="col col-1">col-1</div>
+                <div class="col col-3">col-3</div>
+            </div>
+        </div>
+    </div>
+    
+    
+     <div class="container">
+        <div class="row-padded">
+            <div class="row grid-example">
+                <div class="col col-3"><div class="asdsad">asdasds</div></div>
+                <div class="col col-2">col-2</div>
+                <div class="col col-4">col-4</div>
+                <div class="col col-1">col-1</div>
+                <div class="col col-3">col-3</div>
+            </div>
+        </div>
+    
+    </main>
+
+</body>
+
+</html>
