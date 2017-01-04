@@ -8,41 +8,73 @@
     max-width: $container-width; 
     margin-right: auto;
     margin-left: auto; 
-    overflow: hidden; // avoids scrollbars created by the negative margins
-    display: table; // this fixes the issue of disappearing content if it is surrounded by a wrapping div with no display set 
+//    display: table; // this fixes the issue of disappearing content if it is surrounded by a wrapping div with no display set
     width: 100%; // make sure the container is always at max-width
+    
+    &-fluid {
+        @extend .container;
+        max-width: none;
+    }
 } 
 
 //
 // Grid classes
 //
 @media (min-width: $mobile-breakpoint) {
-    // Add '.grid' for the table
-    .grid {
+    
+    // Use '.row' for a row of cells
+    .row {
         display: table;
         width: 100%;
         table-layout: fixed;
-        
-        //add '.padded' for inner gutters
-        .padded {
-            padding: $gutter-width / 2; //this can actually be any arbitrary number
+        text-align: left;
+    
+        // Use '.row-auto' instead of '.row' to use specific column widths without auto filling the entire container area. Yes- align will still work for inline-block :)
+        &-auto {
+            
+            @extend .row;
+            
+            .col {
+                
+                &:first-child { 
+                    margin-left: 0;
+                }
+                
+                &:last-child{
+                    margin-right: 0;
+                }  
+                 
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+            }
         }
         
-        .grid-padded & {
-            border-spacing: $gutter-width 0;
+        // Use 'row-padded' as a wrapper around 'row' if you want gutters
+        .row-padded & {
+            .col {
+                border-right:$gutter-width solid transparent;
+                background-clip: padding-box;
+                
+                &:first-child {
+                    border-left: none;
+                }
+                
+                &:last-child {
+                    border-right: none;
+                }
+            }  
         }
     }
     
     // Add '.col' for the table cells, or columns
     .col {
         display: table-cell;
-//        background: pink; //for debugging
+//        word-wrap: break-word;
     }
     
-    // Padded columns
-    // Use as a wrapper around '.grid' to create column spacing
-    .grid-padded {
-        margin-left: -$gutter-width;
-        margin-right: -$gutter-width;
+    //add '.padded' to cols for inner spacing
+    .padded {
+        padding: $gutter-width / 2; //this can actually be any arbitrary number
     }
 }
