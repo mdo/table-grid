@@ -20,10 +20,10 @@
 // Reverse column sorting
 //
 
-.grid-reverse {
+.row-reverse {
   direction: rtl;
 }
 
-.grid-reverse .col {
+.row-reverse .col {
   direction: ltr;
 }

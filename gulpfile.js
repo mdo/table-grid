@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
+    cleanCSS = require('gulp-clean-css'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync');
 
@@ -31,7 +31,7 @@ gulp.task('styles', function () {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(minifycss())
+        .pipe(cleanCSS())
         .pipe(gulp.dest('./'))
         .pipe(browserSync.reload({
             stream: true

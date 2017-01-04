@@ -1,28 +1,39 @@
 /*--------------------------------------------------------------
 ## Table Grid
 --------------------------------------------------------------*/
-.container {
+.container, .container-fluid {
   max-width: 1400px;
   margin-right: auto;
   margin-left: auto;
-  overflow: hidden;
-  display: table;
   width: 100%; }
+  .container-fluid {
+    max-width: none; }
 
 @media (min-width: 600px) {
-  .grid {
+  .row, .row-auto {
     display: table;
     width: 100%;
-    table-layout: fixed; }
-    .grid .padded {
-      padding: 20px; }
-    .grid-padded .grid {
-      border-spacing: 40px 0; }
+    table-layout: fixed;
+    text-align: left; }
+    .row-auto .col {
+      display: inline-block;
+      vertical-align: top;
+      position: relative; }
+      .row-auto .col:first-child {
+        margin-left: 0; }
+      .row-auto .col:last-child {
+        margin-right: 0; }
+    .row-padded .row .col, .row-padded .row-auto .col {
+      border-right: 40px solid transparent;
+      background-clip: padding-box; }
+      .row-padded .row .col:first-child, .row-padded .row-auto .col:first-child {
+        border-left: none; }
+      .row-padded .row .col:last-child, .row-padded .row-auto .col:last-child {
+        border-right: none; }
   .col {
     display: table-cell; }
-  .grid-padded {
-    margin-left: -40px;
-    margin-right: -40px; } }
+  .padded {
+    padding: 20px; } }
 
 .col-1 {
   width: 100%; }
@@ -124,8 +135,52 @@
 .col.align-bottom {
   vertical-align: bottom; }
 
-.grid-reverse {
+.row-reverse {
   direction: rtl; }
 
-.grid-reverse .col {
+.row-reverse .col {
   direction: ltr; }
+
+/* 
+
+Usage
+
+==================================
+With gutters
+==================================
+
+<div class="container">   
+    <div class="row-padded">
+        <div class="row">
+            <div class="col">Column</div>
+            <div class="col">Column</div>
+        </div>
+    </div>
+</div>
+
+==================================
+No gutters
+==================================
+
+<div class="container">  
+    <div class="grid">
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+    </div>
+</div>
+
+==================================
+Columns with no automatic widths
+==================================
+Normally, table cells fills the entire width of its parent automatically. Using .row-auto instead of .row ensures the width of each column stays fixed relative to the container width.
+==================================
+
+<div class="container">  
+    <div class="row-auto">
+        <div class="col-5">Column</div>
+        <div class="col-5">Column</div>
+    </div>
+</div>
+
+*/

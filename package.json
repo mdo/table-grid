@@ -27,7 +27,7 @@
     "devDependencies": {
         "browser-sync": "*",
         "gulp-autoprefixer": "*",
-        "gulp-minify-css": "*",
+        "gulp-clean-css": "*",
         "gulp-plumber": "*",
         "gulp-rename": "*",
         "gulp-sass": "*",
