@@ -13,8 +13,8 @@
 
 .grid-reverse {
   direction: rtl;
-}
-
-.grid-reverse .col {
-  direction: ltr;
+  
+  .col {
+    direction: ltr;
+  }
 }

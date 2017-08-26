@@ -31,8 +31,9 @@
   .grid-padded {
     margin-left:  -1rem;
     margin-right: -1rem;
-  }
-  .grid-padded .grid {
-    border-spacing: 1rem 0;
+    
+    .grid {
+      border-spacing: 1rem 0;
+    }
   }
 }
