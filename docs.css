@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  max-width: 54rem;
+  max-width: 56rem;
   padding: 0 1rem;
 }
 
@@ -58,7 +58,7 @@ p {
 }
 .container > p {
   margin: .5rem auto 1rem;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 hr {
